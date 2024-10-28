@@ -1,0 +1,77 @@
+{
+  "module": {
+    "requestPermissions": [
+      {
+        //网络权限:system_grant系统权限
+        "name": "ohos.permission.INTERNET"
+      },
+      {
+        //后台运行权限:system_grant系统权限
+        "name": "ohos.permission.KEEP_BACKGROUND_RUNNING"
+      },
+      {
+        //代理权限:system_grant系统权限
+        "name": "ohos.permission.PUBLISH_AGENT_REMINDER"
+      },
+      {
+        //通知控制权限:system_grant系统权限,不用配置后续的说明
+        //默认为关闭的,这里只能满足代码需要,但是功能还没有
+        "name": 'ohos.permission.ACCESS_NOTIFICATION_POLICY'
+      }
+    ],
+    "name": "entry",
+    "type": "entry",
+    "description": "$string:module_desc",
+    "mainElement": "EntryAbility",
+    "deviceTypes": [
+      "phone",
+      "tablet"
+    ],
+    "deliveryWithInstall": true,
+    "installationFree": false,
+    "pages": "$profile:main_pages",
+    "abilities": [
+      {
+        "name": "EntryAbility",
+        "srcEntry": "./ets/entryability/EntryAbility.ets",
+        "description": "$string:EntryAbility_desc",
+        "icon": "$media:layered_image",
+        "label": "$string:EntryAbility_label",
+        "startWindowIcon": "$media:startIcon",
+        "startWindowBackground": "$color:start_window_background",
+        "exported": true,
+        // 后台模型
+        "backgroundModes": [
+          "dataTransfer",             // 数据传输
+          "location",                 // 位置信息
+          "audioPlayback",            // 音频播放
+          "audioRecording",           // 音频录制
+        ],
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ]
+      }
+    ],
+    "extensionAbilities": [
+      {
+        "name": "EntryBackupAbility",
+        "srcEntry": "./ets/entrybackupability/EntryBackupAbility.ets",
+        "type": "backup",
+        "exported": false,
+        "metadata": [
+          {
+            "name": "ohos.extension.backup",
+            "resource": "$profile:backup_config"
+          }
+        ],
+      }
+    ]
+  }
+}

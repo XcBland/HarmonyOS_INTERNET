@@ -1,0 +1,8 @@
+{
+  "src": [
+    "pages/Index",
+    "pages/UpDownFile",
+    "pages/Index02",
+    "pages/ViewPicker"
+  ]
+}

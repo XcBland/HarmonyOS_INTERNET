@@ -1,0 +1,27 @@
+{
+  "module": {
+    "name": "hmpay",
+    "type": "feature",
+    "description": "$string:module_desc",
+    "mainElement": "HmpayAbility",
+    "deviceTypes": [
+      "phone",
+      "tablet"
+    ],
+    "deliveryWithInstall": true,
+    "installationFree": false,
+    "pages": "$profile:main_pages",
+    "abilities": [
+      {
+        "name": "HmpayAbility",//默认单例模式
+        "srcEntry": "./ets/hmpayability/HmpayAbility.ets",
+        "description": "$string:HmpayAbility_desc",
+        "icon": "$media:layered_image",
+        "label": "$string:HmpayAbility_label",
+        "startWindowIcon": "$media:startIcon",
+        "startWindowBackground": "$color:start_window_background",
+        "exported": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "module": {
+    //申请权限
+    "requestPermissions": [
+      //默认已经拥有normal等级权限，现在不足，还需要申请
+      //系统system_grant授权的，只需要名字,其他信息允许缺省
+      {
+        "name": "ohos.permission.INTERNET"          //网络权限
+      },
+      //如果需要user_grant授权的，则需要提供以下信息
+      {
+        "name": "ohos.permission.CAMERA",           //相机权限
+        "reason": "$string:camera_reason",        //申请理由：用户授权时，必填项
+        "usedScene": {                              //使用场景：用户授权时，必填项
+          "abilities": [
+            "EntryAbility"                      //标识需要申请的Ability列表
+          ],"when": "always"        //申请时机：always表示随时申请，inuse:表示在使用时申请,只能在前台使用时申请
+        }
+      },
+      {
+        "name": "ohos.permission.MICROPHONE",       //麦克风权限
+        "reason": "$string:microphone_reason",
+        "usedScene": {
+          "abilities": [
+            "EntryAbility"
+          ],"when": "always"
+        }
+      },
+      {
+        "name": "ohos.permission.LOCATION",         //位置权限
+        "reason": "$string:location_reason",
+        "usedScene": {
+          "abilities": [
+            "EntryAbility"
+          ],"when": "always"
+        }
+      },
+      {
+        "name": "ohos.permission.APPROXIMATELY_LOCATION",   //粗略位置权限
+        "reason": "$string:approximate_location_reason",
+        "usedScene": {
+          "abilities": [
+            "EntryAbility"
+          ],"when": "always"
+        }
+      },
+      {
+        "name": "ohos.permission.GET_NETWORK_INFO"   //获取网络信息权限
+      },
+      {
+        "name": "ohos.permission.SET_NETWORK_INFO"   //设置网络信息权限
+      }
+    ],
+    //模块名称
+    "name": "entry",
+    //模块类型
+    "type": "entry",
+    //模块版本说明
+    "description": "$string:module_desc",
+    //模块主元素
+    "mainElement": "EntryAbility",
+    //模块适配类型
+    "deviceTypes": [
+      "phone"
+    ],
+    //是不是可以直接安装
+    "deliveryWithInstall": true,
+    ///是否需要安装其他免费资源
+    "installationFree": false,
+    //页面列表
+    "pages": "$profile:main_pages",
+    //Ability列表
+    "abilities": [
+      {
+        "name": "EntryAbility",
+        "srcEntry": "./ets/entryability/EntryAbility.ets",
+        "description": "$string:EntryAbility_desc",
+        "icon": "$media:layered_image",
+        "label": "$string:EntryAbility_label",
+        "startWindowIcon": "$media:startIcon",
+        "startWindowBackground": "$color:start_window_background",
+        "exported": true,
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ]
+      }
+    ],
+    //扩展Ability列表
+    "extensionAbilities": [
+      {
+        "name": "EntryBackupAbility",
+        "srcEntry": "./ets/entrybackupability/EntryBackupAbility.ets",
+        "type": "backup",
+        "exported": false,
+        "metadata": [
+          {
+            "name": "ohos.extension.backup",
+            "resource": "$profile:backup_config"
+          }
+        ],
+      }
+    ]
+  }
+}

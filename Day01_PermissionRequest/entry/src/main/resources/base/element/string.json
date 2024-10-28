@@ -1,0 +1,40 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "module description"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "label"
+    },
+    {
+      "name": "camera_reason",
+      "value": "I need use your camera"
+    },
+    {
+      "name": "microphone_reason",
+      "value": "I need use your microphone"
+    },
+    {
+      "name": "location_reason",
+      "value": "Location"
+    },
+    {
+      "name": "notification_reason",
+      "value": "notification"
+    },
+    {
+      "name": "storage_reason",
+      "value": "storage"
+    },
+    {
+      "name": "approximate_location_reason",
+      "value": "approximate_location_reason"
+    }
+  ]
+}

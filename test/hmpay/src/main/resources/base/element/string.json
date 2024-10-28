@@ -1,0 +1,16 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "module description"
+    },
+    {
+      "name": "HmpayAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "HmpayAbility_label",
+      "value": "label"
+    }
+  ]
+}

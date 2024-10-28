@@ -1,0 +1,32 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "module description"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "label"
+    },
+    {
+      "name": "docAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "docAbility_label",
+      "value": "label"
+    },
+    {
+      "name": "Docability_desc",
+      "value": "description"
+    },
+    {
+      "name": "Docability_label",
+      "value": "label"
+    }
+  ]
+}
